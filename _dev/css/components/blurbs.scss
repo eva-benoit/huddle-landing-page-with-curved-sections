@@ -1,0 +1,108 @@
+// Components - Blurbs
+
+.blurb {
+  max-width: 160px;
+  margin: 89px auto 0;
+
+  img {
+    margin-left: 4px;
+  }
+
+  p {
+    position: relative;
+
+    strong {
+      display: block;
+    }
+
+    span {
+      display: inline-block;
+      width: 100%;
+      color: $neutral-gray;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+
+  &.blurb-style-1 {
+    img {
+      width: 28.89px;
+      height: 25.85px;
+    }
+
+    p {
+      top: -7px;
+
+      strong {
+        font-size: 60.95px;
+        line-height: 91.43px;
+      }
+
+      span {
+        font-size: 15.24px;
+        line-height: 22.86px;
+      }
+    }
+  }
+
+  &.blurb-style-2 {
+    img {
+      width: 23px;
+    }
+
+    p {
+      top: -5px;
+
+      strong {
+        font-size: 53.52px;
+        line-height: 80.28px;
+      }
+
+      span {
+        position: relative;
+        left: -9px;
+        font-size: 13.38px;
+        line-height: 20.07px;
+      }
+    }
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  .blurb {
+    max-width: 100%;
+
+    &.blurb-style-1 p,
+    &.blurb-style-2 p {
+      strong {
+        font-size: 96px;
+        line-height: 144px;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    &.blurb-style-1 img {
+      width: 45.49px;
+      height: 40.59px;
+      margin-left: 5px;
+    }
+
+    &.blurb-style-2 {
+      img {
+        width: 40px;
+        margin-left: 8px;
+      }
+
+      p span {
+        left: -17px;
+      }
+    }
+  }
+}

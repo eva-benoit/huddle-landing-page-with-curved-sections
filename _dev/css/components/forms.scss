@@ -1,0 +1,56 @@
+// Components - Forms
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin: 14px 0;
+}
+
+input {
+  border: 0;
+  border-radius: 6px;
+  outline: 0;
+
+  &[type="email"] {
+    width: 320px;
+    height: 48px;
+    padding: 10px;
+    margin: 16px 0;
+    box-sizing: border-box;
+  }
+
+  &[type="submit"] {
+    display: block;
+    padding: 15px 42px;
+    margin-left: auto;
+    font-weight: 700;
+    color: $white;
+    background-color: $primary-pink;
+    appearance: none;
+
+    @extend .btn;
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  input {
+    &[type="email"] {
+      margin: 25px 0;
+    }
+
+    &[type="submit"] {
+      display: inline-block;
+    }
+  }
+}

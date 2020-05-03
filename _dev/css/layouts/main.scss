@@ -1,0 +1,376 @@
+// Layout - Main
+
+// HTML main tags
+
+* {
+  transition: all .5s;
+}
+
+
+// Header
+//
+// Website logo and button
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px;
+
+  img {
+    width: 96px;
+    height: 16px;
+  }
+}
+
+
+// Hero section
+
+#section-hero {
+  padding: 88px 39px 32px 40px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    margin-top: 55px;
+  }
+}
+
+
+// Blurbs list
+
+#list-blurbs {
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+// Features
+
+.features {
+  margin-top: 20px;
+}
+
+.feature {
+  margin-bottom: 49px;
+  overflow: auto;
+
+  &:nth-child(3n+1) {
+    background-color: $neutral-blue;
+
+    .feature-curve-top {
+      content: url("./images/bg-section-top-mobile-1.svg");
+    }
+
+    .feature-curve-bottom {
+      content: url("./images/bg-section-bottom-mobile-1.svg");
+    }
+  }
+
+  &:nth-child(3n) {
+    margin-top: 65px;
+    background-color: $neutral-blue;
+
+    .feature-curve-top {
+      content: url("./images/bg-section-top-mobile-2.svg");
+    }
+
+    .feature-img {
+      margin-top: -24px;
+    }
+
+    .feature-curve-bottom {
+      content: url("./images/bg-section-bottom-mobile-2.svg");
+      margin-top: 115px;
+    }
+  }
+}
+
+.feature-curve {
+  width: 100%;
+  background-color: $white;
+}
+
+.feature-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 280px;
+  margin: 44px auto;
+
+  img {
+    display: block;
+    width: 93%;
+  }
+}
+
+.feature-content {
+  max-width: 320px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+
+// Call-to-action section
+
+#section-cta {
+  padding: 18px 0 216px;
+  text-align: center;
+
+  .btn-primary {
+    margin: 36px 0;
+  }
+}
+
+
+// Footer
+//
+// Contact section, newsletter and social networks buttons
+
+footer {
+  overflow: auto;
+  color: $white;
+  background-color: $neutral-cyan;
+
+  > .list {
+    width: 100%;
+    padding: 38px 28px;
+    box-sizing: border-box;
+  }
+
+  p {
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+.footer-curve {
+  content: url("./images/bg-footer-top-mobile.svg");
+  width: 100%;
+  background-color: $white;
+}
+
+#footer-newsletter {
+  margin-bottom: 75px;
+}
+
+#footer-contact {
+  > img {
+    width: 200px;
+    margin: 14px 0;
+    filter: brightness(0%) invert(100%); // Filter logo to get a white version
+  }
+
+  > .list {
+    margin: 41px 0 27px;
+
+    > .list-item {
+      align-items: center;
+      margin-bottom: 17px;
+    }
+
+    img {
+      width: 20px;
+      margin-right: 20px;
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+}
+
+#footer-social {
+  justify-content: flex-start;
+
+  a {
+    margin-right: 19px;
+    font-size: 25px;
+    color: $white;
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  // Header
+  //
+  // Website logo and button
+
+  header {
+    margin: 78px 63px 0 80px;
+
+    img {
+      width: 240px;
+      height: 38px;
+    }
+  }
+
+
+  // Hero section
+
+  #section-hero {
+    padding: 230px 200px 20px 200px;
+
+    p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    img {
+      margin-top: 60px;
+    }
+  }
+
+
+  // Blurbs list
+
+  #list-blurbs {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 280px;
+  }
+
+
+  // Features
+
+  .features {
+    margin-top: 125px;
+  }
+
+  .feature {
+    margin-bottom: 105px;
+
+    &:nth-child(3n+1) {
+      .feature-container {
+        flex-direction: row-reverse;
+        max-width: 1180px;
+      }
+
+      .feature-curve-top {
+        content: url("./images/bg-section-top-desktop-1.svg");
+      }
+
+      .feature-curve-bottom {
+        content: url("./images/bg-section-bottom-desktop-1.svg");
+        margin-top: -23px;
+      }
+    }
+
+    &:nth-child(3n) {
+      margin-top: -85px;
+
+      .feature-container {
+        flex-direction: row-reverse;
+        margin-top: -36px;
+      }
+
+      .feature-curve-top {
+        content: url("./images/bg-section-top-desktop-2.svg");
+      }
+
+      .feature-img {
+        margin-top: 0;
+      }
+
+      .feature-curve-bottom {
+        content: url("./images/bg-section-bottom-desktop-2.svg");
+        margin-top: -40px;
+      }
+    }
+
+    .feature-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feature-img {
+      width: 560px;
+      height: 560px;
+      margin: 0;
+
+      img {
+        width: 95%;
+      }
+    }
+
+    .feature-content {
+      max-width: 520px;
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+
+  // Call-to-action section
+
+  #section-cta {
+    padding: 58px 0 133px 15px;
+  }
+
+
+  // Footer
+  //
+  // Contact section, newsletter and social networks buttons
+
+  footer {
+    > .list {
+      justify-content: space-between;
+      max-width: 1200px;
+      padding: 0;
+      margin: 66px auto;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  #footer-newsletter {
+    order: 2;
+    max-width: 520px;
+    margin-bottom: 0;
+
+    p {
+      max-width: 344px;
+    }
+  }
+
+  #footer-contact {
+    order: 1;
+    max-width: 340px;
+
+    > img {
+      width: 240px;
+      margin: 17px 0 23px;
+    }
+
+    > .list {
+      margin: 24px 0 0 0;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  #footer-social {
+    order: 3;
+    width: 100%;
+    margin-top: 50px;
+
+    a {
+      margin-right: 25px;
+      font-size: 36px;
+    }
+  }
+}

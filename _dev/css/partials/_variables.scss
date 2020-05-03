@@ -1,0 +1,26 @@
+// Variables
+//
+// Use Sass variables by default.
+// Use CSS variable when its value might change considering elements classes or ids.
+
+// Color system
+
+$white: hsl(0, 0%, 100%);
+
+$primary-pink: hsl(322, 100%, 66%);
+$neutral-cyan: hsl(192, 100%, 9%);
+$neutral-blue: hsl(207, 100%, 98%);
+$neutral-gray: hsl(208, 17%, 60%);
+
+$primary-pink-shadow: hsla(322, 100%, 66%, .22);
+$neutral-cyan-shadow: hsla(192, 100%, 9%, .22);
+
+// Breakpoints
+//
+// Define the minimum dimensions at which the layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;

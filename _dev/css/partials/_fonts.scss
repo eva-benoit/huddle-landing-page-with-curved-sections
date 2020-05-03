@@ -1,0 +1,78 @@
+// Fonts and headings
+
+body,
+input {
+  font-family: "Open Sans", sans-serif;
+  color: $neutral-cyan;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins, sans-serif;
+  text-transform: capitalize;
+}
+
+h1 {
+  max-width: 280px;
+  margin: 0 auto 22px;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+h3 {
+  margin: 18px 0 13px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h4 {
+  margin: 17px 0;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  h1 {
+    max-width: 100%;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  h3 {
+    margin: 0 0 25px 0;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
