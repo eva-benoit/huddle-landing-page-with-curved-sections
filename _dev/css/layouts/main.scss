@@ -368,7 +368,7 @@ footer {
   }
 
   .box-curve-footer {
-    content: url("./images/bg-footer-top-desktop.svg");
+    background-image: url("./images/bg-footer-top-desktop.svg");
     height: 155px;
   }
 
@@ -378,7 +378,7 @@ footer {
     margin-bottom: 0;
 
     p {
-      max-width: 344px;
+      max-width: 335px;
     }
   }
 
