@@ -52,7 +52,7 @@ header {
 }
 
 .feature {
-  margin-bottom: 49px;
+  margin-bottom: 50px;
   overflow: auto;
 
   &:nth-child(3n+1) {
@@ -60,10 +60,13 @@ header {
 
     .feature-curve-top {
       content: url("./images/bg-section-top-mobile-1.svg");
+      height: 110px;
+      margin-bottom: 47px;
     }
 
     .feature-curve-bottom {
       content: url("./images/bg-section-bottom-mobile-1.svg");
+      height: 50px;
     }
   }
 
@@ -73,15 +76,17 @@ header {
 
     .feature-curve-top {
       content: url("./images/bg-section-top-mobile-2.svg");
+      height: 100px;
     }
 
     .feature-img {
-      margin-top: -24px;
+      margin-top: -20px;
     }
 
     .feature-curve-bottom {
       content: url("./images/bg-section-bottom-mobile-2.svg");
-      margin-top: 115px;
+      height: 99px;
+      margin-top: 120px;
     }
   }
 }
@@ -115,7 +120,7 @@ header {
 // Call-to-action section
 
 #section-cta {
-  padding: 18px 0 216px;
+  padding: 14px 0 216px;
   text-align: center;
 
   .btn-primary {
@@ -134,8 +139,11 @@ footer {
   background-color: $neutral-cyan;
 
   > .list {
+    justify-content: space-around;
     width: 100%;
-    padding: 38px 28px;
+    max-width: 1000px;
+    padding: 38px 28px 41px 28px;
+    margin: auto;
     box-sizing: border-box;
   }
 
@@ -148,14 +156,18 @@ footer {
 .footer-curve {
   content: url("./images/bg-footer-top-mobile.svg");
   width: 100%;
+  height: 53px;
   background-color: $white;
 }
 
 #footer-newsletter {
+  max-width: 320px;
   margin-bottom: 75px;
 }
 
 #footer-contact {
+  max-width: 320px;
+
   > img {
     width: 200px;
     margin: 14px 0;
@@ -163,6 +175,7 @@ footer {
   }
 
   > .list {
+    flex-direction: column;
     margin: 41px 0 27px;
 
     > .list-item {
@@ -179,10 +192,15 @@ footer {
       font-weight: 400;
     }
   }
+
+  .list {
+    justify-content: flex-start;
+  }
 }
 
 #footer-social {
   justify-content: flex-start;
+  width: 100%;
 
   a {
     margin-right: 19px;
@@ -254,10 +272,13 @@ footer {
 
       .feature-curve-top {
         content: url("./images/bg-section-top-desktop-1.svg");
+        height: 163px;
+        margin-bottom: 4px;
       }
 
       .feature-curve-bottom {
         content: url("./images/bg-section-bottom-desktop-1.svg");
+        height: 137px;
         margin-top: -23px;
       }
     }
@@ -272,6 +293,8 @@ footer {
 
       .feature-curve-top {
         content: url("./images/bg-section-top-desktop-2.svg");
+        height: 154px;
+        margin-bottom: 2px;
       }
 
       .feature-img {
@@ -280,6 +303,7 @@ footer {
 
       .feature-curve-bottom {
         content: url("./images/bg-section-bottom-desktop-2.svg");
+        height: 137px;
         margin-top: -40px;
       }
     }
@@ -314,7 +338,12 @@ footer {
   // Call-to-action section
 
   #section-cta {
-    padding: 58px 0 133px 15px;
+    padding: 61px 0 142px 15px;
+
+    .btn-primary {
+      position: relative;
+      left: -8px;
+    }
   }
 
 
@@ -325,14 +354,19 @@ footer {
   footer {
     > .list {
       justify-content: space-between;
-      max-width: 1200px;
-      padding: 0;
-      margin: 66px auto;
+      max-width: 1300px;
+      padding: 0 50px;
+      margin: 105px auto 98px;
     }
 
     p {
       font-size: 14px;
     }
+  }
+
+  .footer-curve {
+    content: url("./images/bg-footer-top-desktop.svg");
+    height: 155px;
   }
 
   #footer-newsletter {
@@ -355,6 +389,7 @@ footer {
     }
 
     > .list {
+      flex-direction: row;
       margin: 24px 0 0 0;
 
       p {
